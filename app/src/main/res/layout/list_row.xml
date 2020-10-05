@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_for_title"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/title_textview"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/app_name"
+                        android:textSize="20sp"
+                        android:textStyle="italic|bold" />
+                    <TableRow
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/title_textview">
+
+                        <Button
+                            android:id="@+id/editButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/baseline_create_black_18dp"
+                            />
+                        <Button
+                            android:id="@+id/deleteButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/baseline_delete_black_18dp"
+                            />
+                    </TableRow>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_for_details"
+                android:layout_below="@+id/cardview_for_title"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/date_note_added"
+                        android:textStyle="italic"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/date_added"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/details_textview"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="4dp"
+                        android:textStyle="italic"
+                        android:textSize="17sp"
+                        android:text="@string/app_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
